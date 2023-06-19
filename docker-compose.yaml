@@ -12,9 +12,9 @@ services:
       - type: bind
         source: ./
         target: $WORK_DIR
-    # command: sh -c 'cd frontend && yarn start'
+    command: sh -c 'cd web_ui && yarn start'
     ports:
-      - target: 8000
-        published: 3000
+      - target: 3000    # container
+        published: 8000 # host
     stdin_open: true # -i
     tty: true # -t

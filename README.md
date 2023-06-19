@@ -19,7 +19,7 @@ dockerのオプションによりDockerfileのCMDを上書きしてプロジェ�
 ```console
 $ export IMG_NAME="frontend"
 $ export PJ_NAME="frontend"
-$ docker compose run --rm frontend sh -c "yarn create react-app frontend --template typescript"
+$ docker compose run --rm frontend sh -c "yarn upgrade --latest && yarn create react-app web_ui --template typescript | tee yarn.log"
 yarn add v1.22.17
 info No lockfile found.
 [1/4] Resolving packages...
